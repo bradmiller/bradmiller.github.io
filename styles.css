@@ -82,9 +82,10 @@ a:hover {
 .portrait {
   grid-column: 1;
   grid-row: 1 / span 2;
-  width: 147px;
+  width: 228px;
   height: auto;
   aspect-ratio: 147 / 200;
+  align-self: start;
   display: block;
   object-fit: cover;
   background: #e7e2da;
@@ -107,17 +108,27 @@ a:hover {
   min-width: 0;
 }
 
+.path {
+  margin: 0 0 1lh;
+}
+
+.path span {
+  white-space: nowrap;
+}
+
 .bio {
   margin: 0;
   text-wrap: pretty;
 }
 
-.contact {
-  margin: 0.9rem 0 0;
-  font-style: normal;
+.presence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.1rem;
+  margin: 0.85rem 0 0;
 }
 
-.contact button {
+.presence button {
   display: inline;
   font: inherit;
   color: var(--link);
@@ -130,8 +141,24 @@ a:hover {
   text-underline-offset: 0.16em;
 }
 
-.contact button:hover {
+.presence button:hover {
   color: var(--link-hover);
+}
+
+.banner {
+  margin-top: 1.75rem;
+  padding: 0.85rem 1.05rem 0.95rem;
+  border: 1px solid var(--line);
+  background: #fffcf8;
+}
+
+.banner p {
+  margin: 0;
+}
+
+.banner p + p {
+  margin-top: 0.35rem;
+  color: var(--muted);
 }
 
 .nav {
@@ -232,6 +259,7 @@ details summary:hover {
   .portrait {
     grid-row: 1;
     width: 112px;
+    height: auto;
   }
 
   .intro h1 {
